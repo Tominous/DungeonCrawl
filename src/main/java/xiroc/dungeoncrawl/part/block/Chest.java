@@ -69,17 +69,17 @@ public class Chest implements IBlockPlacementHandler {
 
 	}
 
-//	public static class Barrel implements IBlockPlacementHandler {
-//
-//		@Override
-//		public void setupBlock(IWorld world, BlockState state, BlockPos pos, Random rand, Treasure.Type treasureType,
-//				int theme, int lootLevel) {
-//			world.setBlockState(pos, state, 2);
-//			ResourceLocation lootTable = Treasure.SPECIAL_LOOT_TABLES.get(treasureType);
-//			LockableLootTileEntity.setLootTable(world, world.getRandom(), pos,
-//					lootTable == null ? getLootTable(theme, lootLevel) : lootTable);
-//		}
-//
-//	}
+	public static class Barrel implements IBlockPlacementHandler {
+
+		@Override
+		public void setupBlock(IWorld world, BlockState state, BlockPos pos, Random rand, Treasure.Type treasureType,
+				int theme, int lootLevel) {
+			world.setBlockState(pos, state, 2);
+			ResourceLocation lootTable = Treasure.SPECIAL_LOOT_TABLES.get(treasureType);
+			LockableLootTileEntity.setLootTable(world, world.getRandom(), pos,
+					lootTable == null ? getLootTable(theme, lootLevel) : lootTable);
+		}
+
+	}
 
 }
