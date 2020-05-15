@@ -96,11 +96,11 @@ public class Tools {
 							BlockRegistry.STONE_BRICKS_NORMAL_CRACKED_COBBLESTONE.get());
 				} else if (event.getItemStack().getDisplayName().getString().equals("TT_002")) {
 
-//				DungeonBuilder builder = new DungeonBuilder(event.getWorld().getChunkProvider().func_225313_a(0, 0)),
-//						new ChunkPos(event.getPos()), event.getWorld().rand);
-//				for (DungeonPiece piece : builder.build())
-//					piece.func_225577_a_(event.getWorld(), null ,event.getWorld().rand, null,
-//							new ChunkPos(new BlockPos(piece.x, piece.y, piece.z)));
+				DungeonBuilder builder = new DungeonBuilder(event.getWorld().getChunkProvider().func_225313_a(0, 0)),
+						new ChunkPos(event.getPos()), event.getWorld().rand);
+				for (DungeonPiece piece : builder.build())
+					piece.func_225577_a_(event.getWorld(), null ,event.getWorld().rand, null,
+							new ChunkPos(new BlockPos(piece.x, piece.y, piece.z)));
 				} else if (event.getItemStack().getDisplayName().getString().equals("TT_003")) {
 					if (!event.getWorld().isRemote)
 						IBlockPlacementHandler.getHandler(Blocks.CHEST).setupBlock(event.getWorld(),
